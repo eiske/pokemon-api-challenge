@@ -1,6 +1,7 @@
 .pageHeader {
     display: flex;
-    background-color: #e83837;
+    justify-content: center;
+    background-color: #fff;
 }
 
 img {

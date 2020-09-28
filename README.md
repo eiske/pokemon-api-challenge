@@ -2,10 +2,6 @@
 
 Challenge is based on the creation of a website that lists the generations of Pokémon games and their details.
 
-## Framework
-
-This aplication is generated with [ReactJS](https://reactjs.org/docs/getting-started.html)
-
 ## Installation
 
 - Download/Clone the project from this repository.

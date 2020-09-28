@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import { history } from '../router/history';
 import Routes from '../router/Routes';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 const App = () => {
   return (

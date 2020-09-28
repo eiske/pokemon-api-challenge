@@ -1,13 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #fff;
   display: flex;
   flex-grow: 1;
   min-height: 100vh;
   flex-direction: column;
 }
 
-a {
-  text-decoration: none;
+a:link {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
 }

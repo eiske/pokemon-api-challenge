@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const pokemonLogo = require('../../assets/images/pokemon_logo.png');
+const pokemonLogo = require('../../assets/images/delivery_much_logo.png');
 require('./styles.css');
 const PageHeader = () => {
   return (

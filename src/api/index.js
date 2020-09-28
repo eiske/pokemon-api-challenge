@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const baseURL = 'https://pokeapi.co/api/v2';
-const imageURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
 export const getGenerations = () =>
   axios.get(`${baseURL}/generation`).then(handleResponse).catch(handleError);
@@ -13,6 +12,9 @@ export const getGames = (url) => axios.get(url).then(handleResponse).catch(handl
 
 export const getPokemonById = (id) =>
   axios.get(`${baseURL}/pokemon/${id}`).then(handleResponse).catch(handleError);
+
+export const getPokemonSpeciesById = (pokemonId) =>
+  axios.get(`${baseURL}/pokemon-species/${pokemonId}/`).then(handleResponse).catch(handleError);
 
 export const getPokedex = async (url) => {
   const { pokedexes } = await fetchData(url);

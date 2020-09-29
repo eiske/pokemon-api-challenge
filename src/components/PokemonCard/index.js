@@ -33,7 +33,7 @@ const PokemonCard = ({ name, url }) => {
           <h6 className='card-title'>{pokeName}</h6>
         </div>
       </div>
-      <Dialog onClose={handleClose} open={dialog}>
+      <Dialog maxWidth onClose={handleClose} open={dialog}>
         <Pokemon pokemonId={pokeIndex} />
         <DialogActions>
           <button type='button' className='btn btn-outline-danger' onClick={handleClose} color='primary'>

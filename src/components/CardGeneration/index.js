@@ -3,7 +3,7 @@ import { Typography } from '@material-ui/core';
 
 const CardGeneration = ({ generationName }) => {
   return (
-    <div className='card'>
+    <div className='card shadow'>
       <div className='card-header'>
         <Typography variant='h4'>{generationName}</Typography>
       </div>

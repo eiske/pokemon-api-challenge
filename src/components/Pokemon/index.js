@@ -36,7 +36,6 @@ export default class Pokemon extends Component {
 
   async componentDidMount() {
     this.setState({ isLoading: true });
-    console.log(this.props);
     const { pokemonId } = this.props;
 
     const pokemonRes = await getPokemonById(pokemonId);

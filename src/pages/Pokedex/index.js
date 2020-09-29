@@ -16,16 +16,24 @@ const Pokedex = ({
     fetchGames();
   }, [url]);
 
+  const renderGames = () =>
+    games.version_groups.map((game) => (
+      <button key={game.name} type='button' className='btn btn-outline-dark m-1' disabled>
+        {game.name}
+      </button>
+    ));
+
   return (
     <div>
       {games && (
         <>
-          <div className=' mt-2 col text-center text-uppercase'>
-            {games.version_groups.map((game) => (
-              <button type='button' class='btn btn-outline-dark m-1' disabled>
-                {game.name}
-              </button>
-            ))}
+          <div className='mt-2 col text-center'>
+            <div className='F'>
+              <h4>
+                <span className='badge badge-danger'>GAMES:</span>
+              </h4>
+            </div>
+            {renderGames()}
           </div>
           <PokedexContainer url={games.main_region.url} />
         </>

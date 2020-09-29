@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Dialog, DialogActions } from '@material-ui/core';
 import Pokemon from '../Pokemon';
 
-require('./style.css');
 const PokemonCard = ({ name, url }) => {
   const [pokeName, setPokeName] = useState();
   const [imageUrl, setimageUrl] = useState();
@@ -29,7 +28,7 @@ const PokemonCard = ({ name, url }) => {
     <>
       <div onClick={handleOpenDialog} className='shadow card'>
         <h5 className='card-header'>#{pokeIndex}</h5>
-        <img src={imageUrl} alt='' style={{ width: '100%', height: '100%' }} className='mx-auto mt-2' />
+        <img src={imageUrl} alt='' className='mx-auto mt-2 pokemon-sprite' />
         <div className='card-body mx-auto my-auto'>
           <h6 className='card-title'>{pokeName}</h6>
         </div>
@@ -37,7 +36,7 @@ const PokemonCard = ({ name, url }) => {
       <Dialog onClose={handleClose} open={dialog}>
         <Pokemon pokemonId={pokeIndex} />
         <DialogActions>
-          <button type='button' class='btn btn-outline-danger' onClick={handleClose} color='primary'>
+          <button type='button' className='btn btn-outline-danger' onClick={handleClose} color='primary'>
             Close
           </button>
         </DialogActions>

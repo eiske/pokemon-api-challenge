@@ -1,9 +1,8 @@
-import { CircularProgress } from '@material-ui/core';
 /* eslint-disable array-callback-return */
 import React, { Component } from 'react';
+import { CircularProgress } from '@material-ui/core';
 import { getPokemonById, getPokemonSpeciesById } from '../../api';
 import { TYPE_COLORS } from '../../constants';
-require('./styles.css');
 export default class Pokemon extends Component {
   state = {
     name: '',
@@ -222,7 +221,7 @@ export default class Pokemon extends Component {
             <div className='card-body'>
               <div className='row align-items-center'>
                 <div className=' col-md-3 '>
-                  <img src={imageUrl} alt='' className='mx-auto mt-2' />
+                  <img src={imageUrl} alt='' className='mx-auto mt-2 pokemon-sprite' />
                 </div>
                 <div className='col-md-9'>
                   <h4 className='mx-auto'>
@@ -362,7 +361,7 @@ export default class Pokemon extends Component {
             </div>
             <hr />
             <div className='card-body'>
-              <h5 class='card-title text-center'>Profile</h5>
+              <h5 className='card-title text-center'>Profile</h5>
               <div className='row'>
                 <div className='col-md-6'>
                   <div className='row'>
@@ -388,9 +387,9 @@ export default class Pokemon extends Component {
                       <h6 className='float-right'>Gender Ratio:</h6>
                     </div>
                     <div className='col-6'>
-                      <div class='progress'>
+                      <div className='progress'>
                         <div
-                          class='progress-bar progress-bar-striped'
+                          className='progress-bar progress-bar-striped'
                           role='progressbar'
                           style={{
                             width: `${genderRatioFemale}%`,
@@ -403,7 +402,7 @@ export default class Pokemon extends Component {
                           <small>{genderRatioFemale}</small>
                         </div>
                         <div
-                          class='progress-bar progress-bar-striped'
+                          className='progress-bar progress-bar-striped'
                           role='progressbar'
                           style={{
                             width: `${genderRatioMale}%`,

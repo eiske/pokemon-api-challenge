@@ -1,3 +1,4 @@
+import { Breadcrumbs, Link } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { getPokedex } from '../../api';
 import PokemonCard from '../PokemonCard';
@@ -16,21 +17,20 @@ const PokedexContainer = ({ url }) => {
   }, [url]);
 
   const handleChange = (name) => {
-    console.log(name);
     setFilter(name);
   };
 
   return (
     <div>
-      {
-        <div style={{ width: '300px' }}>
+      <div className='d-flex justify-content-center mt-3'>
+        <Breadcrumbs>
           {pokedexes.map((pokedex, index) => (
-            <div key={index} onClick={() => handleChange(pokedex.names[0].name)}>
+            <Link key={index} onClick={() => handleChange(pokedex.names[0].name)}>
               {pokedex.names[0].name}
-            </div>
+            </Link>
           ))}
-        </div>
-      }
+        </Breadcrumbs>
+      </div>
       <div className='pokemon-grid'>
         {pokedexes
           .filter((pokedex) => pokedex.names[0].name === filter)

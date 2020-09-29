@@ -36,7 +36,7 @@ const Home = () => {
         Data from last year's Sword and Shield games (generation-viii) is currently being added to PokéAPI.
         While waiting for an upstream project (Veekun) for verified data we decided to allow our community to
         bring in new data from various different sources. If you want to participate to this update project{' '}
-        <a href='https://github.com/PokeAPI/pokeapi/issues/520' target='_blank'>
+        <a href='https://github.com/PokeAPI/pokeapi/issues/520' rel='noopener noreferrer' target='_blank'>
           read more on GitHub
         </a>
         .

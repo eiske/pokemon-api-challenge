@@ -7,7 +7,7 @@ const PageHeader = () => {
   return (
     <div className='pageHeader'>
       <Link to='/'>
-        <img src={pokemonLogo} alt='' />
+        <img className='logo' src={pokemonLogo} alt='' />
       </Link>
     </div>
   );

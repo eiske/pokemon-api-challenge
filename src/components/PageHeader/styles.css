@@ -4,7 +4,8 @@
     background-color: #fff;
 }
 
-img {
-    height: 3rem;
+.logo {
+    height: 5rem;
+    width: auto;
     padding: 0.5rem 2rem;
 }

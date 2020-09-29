@@ -8,9 +8,14 @@ body {
   flex-direction: column;
 }
 
-a:link {
-  color: inherit;
-  /* blue colors for links too */
-  text-decoration: inherit;
-  /* no underline */
+a:link,
+a:focus,
+a:hover,
+a:visited,
+a:link,
+a:active {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+
 }

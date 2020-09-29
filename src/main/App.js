@@ -1,6 +1,5 @@
 import React from 'react';
-import { Router, Switch } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Router, Switch } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import { history } from '../router/history';
 import Routes from '../router/Routes';

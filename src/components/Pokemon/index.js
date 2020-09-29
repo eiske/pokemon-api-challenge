@@ -184,7 +184,7 @@ export default class Pokemon extends Component {
       isLoading,
     } = this.state;
     return (
-      <div>
+      <div aria-label='pokemon'>
         {isLoading ? (
           <div className='d-flex justify-content-center p-5'>
             <CircularProgress color='secondary' />

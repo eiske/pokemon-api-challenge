@@ -5,7 +5,9 @@ const CardGeneration = ({ generationName }) => {
   return (
     <div className='card shadow'>
       <div className='card-header'>
-        <Typography variant='h4'>{generationName}</Typography>
+        <Typography aria-label='generation-card' variant='h4'>
+          {generationName}
+        </Typography>
       </div>
     </div>
   );

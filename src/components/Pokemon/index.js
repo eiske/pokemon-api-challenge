@@ -70,9 +70,9 @@ export default class Pokemon extends Component {
       }
     });
 
-    const height = Math.round((pokemonRes.height * 0.328084 + 0.00001) * 100) / 100;
+    const height = Math.round(pokemonRes.height * 10);
 
-    const weight = Math.round((pokemonRes.weight * 0.220462 + 0.00001) * 100) / 100;
+    const weight = Math.round(pokemonRes.weight / 10);
 
     const types = pokemonRes.types.map((type) => type.type.name);
 
@@ -370,13 +370,13 @@ export default class Pokemon extends Component {
                       <h6 className='float-right'>Height:</h6>
                     </div>
                     <div className='col-6'>
-                      <h6 className='float-left'>{height} ft.</h6>
+                      <h6 className='float-left'>{height} cm</h6>
                     </div>
                     <div className='col-6'>
                       <h6 className='float-right'>Weight:</h6>
                     </div>
                     <div className='col-6'>
-                      <h6 className='float-left'>{weight} lbs</h6>
+                      <h6 className='float-left'>{weight} kg</h6>
                     </div>
                     <div className='col-6'>
                       <h6 className='float-right'>Catch Rate:</h6>

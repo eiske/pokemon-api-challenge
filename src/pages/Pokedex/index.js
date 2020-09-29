@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Tab, Tabs } from '@material-ui/core';
-import { getGames, getImage } from '../../api';
+import { getGames } from '../../api';
 import PokedexContainer from '../../components/PokedexContainer';
 
 const Pokedex = ({
@@ -19,15 +18,15 @@ const Pokedex = ({
 
   return (
     <div>
-      {/* retirar o TAB */}
-      {/* {console.log(games)} */}
       {games && (
         <>
-          <Tabs indicatorColor='secondary' centered>
-            {games.version_groups.map((game, index) => (
-              <Tab key={index} label={game.name} value={game.name} />
+          <div className=' mt-2 col text-center text-uppercase'>
+            {games.version_groups.map((game) => (
+              <button type='button' class='btn btn-outline-dark m-1' disabled>
+                {game.name}
+              </button>
             ))}
-          </Tabs>
+          </div>
           <PokedexContainer url={games.main_region.url} />
         </>
       )}

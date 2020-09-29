@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { CircularProgress } from '@material-ui/core';
 import { getPokemonById, getPokemonSpeciesById } from '../../api';
 import { TYPE_COLORS } from '../../constants';
+import { convertDecimetresToCentimeter, convertHectogramsToKilograms } from '../../utils';
 export default class Pokemon extends Component {
   state = {
     name: '',
@@ -69,9 +70,9 @@ export default class Pokemon extends Component {
       }
     });
 
-    const height = Math.round(pokemonRes.height * 10);
+    const height = convertDecimetresToCentimeter(pokemonRes.height);
 
-    const weight = Math.round(pokemonRes.weight / 10);
+    const weight = convertHectogramsToKilograms(pokemonRes.weight);
 
     const types = pokemonRes.types.map((type) => type.type.name);
 
